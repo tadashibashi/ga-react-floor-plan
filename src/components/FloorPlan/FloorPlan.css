@@ -1,0 +1,62 @@
+.FloorPlan {
+    font-size: 2vmin;
+    font-weight: 600;
+    padding: 1vmin;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-areas:
+        "bedroom1 bedroom1 livingroom livingroom kitchen"
+        "bedroom1 bedroom1 livingroom livingroom kitchen"
+        "fullbath fullbath livingroom livingroom kitchen"
+        "bedroom2 bedroom2 halfbath bedroom3 bedroom3"
+        "bedroom2 bedroom2 halfbath bedroom3 bedroom3";
+
+    box-shadow: var(--box-shadow-light);
+    border-radius: 1vmin;
+}
+
+
+
+.FloorPlan > .Space:nth-of-type(1) {
+    grid-area: bedroom1;
+}
+
+.FloorPlan > .Space:nth-of-type(4) {
+    grid-area: bedroom2;
+}
+
+.FloorPlan > .Space:nth-of-type(5) {
+    grid-area: livingroom;
+}
+
+.FloorPlan > .Space:nth-of-type(2) {
+    grid-area: kitchen;
+
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: start;
+}
+
+.FloorPlan > .Space:nth-of-type(2) .children {
+    display: grid;
+
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.FloorPlan > .Space:nth-of-type(3) {
+    grid-area: fullbath;
+}
+
+.FloorPlan > .Space:nth-of-type(6) {
+    grid-area: halfbath;
+}
+
+.FloorPlan > .Space:nth-of-type(7) {
+    grid-area: bedroom3;
+}
+
+
